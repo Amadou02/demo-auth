@@ -6,26 +6,29 @@
             <h1>Inscription</h1>
             <form action="" method="POST">
                 <div class="mb-3">
-                    <label for="firstname" class="form-group-label"> Prénom</label>
-                    <input id="firstname" name="text" type="text" class="form-control">
+                    <label for="firstname" class="form-label"> Prénom</label>
+                    <input id="firstname" name="firstname" type="text" class="form-control" value="<?= $firstname ?>">
                 </div>
                 <div class="mb-3">
-                    <label for="lastname" class="form-group-label"> Nom</label>
-                    <input id="lastname" name="lastname" type="text" class="form-control">
+                    <label for="lastname" class="form-label"> Nom</label>
+                    <input id="lastname" name="lastname" type="text" class="form-control" value="<?= $lastname ?>">
                 </div>
                 <div class="mb-3">
-                    <label for="email" class="form-group-label"> Email</label>
-                    <input id="email" name="email" type="text" class="form-control">
+                    <label for="email" class="form-label"> Email</label>
+                    <input id="email" name="email" type="text" class="form-control"  value="<?= $email ?>">
                 </div>
                 <div class="mb-3">
-                    <label for="password" class="form-group-label"> Mot de passe</label>
-                    <input id="password" name="email" type="text" class="form-control">
+                    <label for="password" class="form-label"> Mot de passe</label>
+                    <input id="password" name="password" type="text" class="form-control">
                 </div>
                 <div class="mb-3">
                     <button class="btn btn-lg" type="submit">Se connecter</button>
                     <p class="text-end">Déjà inscrit ? <a class="text-decoration-none text-success" href="../controllers/login-ctrl.php">Se connecter</a></p>
                 </div>
             </form>
+            <pre>
+                <?php var_dump($user); ?>
+            </pre>
         </div>
     </div>
 </div>

@@ -6,12 +6,12 @@
             <h1>Connexion</h1>
             <form action="" method="POST">
                 <div class="mb-3">
-                    <label for="email" class="form-group-label"> Email</label>
+                    <label for="email" class="form-label"> Email</label>
                     <input id="email" name="email" type="text" class="form-control">
                 </div>
                 <div class="mb-3">
-                    <label for="password" class="form-group-label"> Mot de passe</label>
-                    <input id="password" name="email" type="text" class="form-control">
+                    <label for="password" class="form-label"> Mot de passe</label>
+                    <input id="password" name="password" type="text" class="form-control">
                 </div>
                 <div class="mb-3">
                     <button class="btn btn-lg" type="submit">Se connecter</button>
