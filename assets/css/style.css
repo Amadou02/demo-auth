@@ -1,0 +1,165 @@
+/* <!-- google font montserrat --> */
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@100&display=swap');
+
+/*  reset css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* variables css */
+
+:root {
+  /* primary */
+  --background-color: #000a12;
+  --secondary: #E1E2E1;
+  --text-color: #ffffff;
+  /* secondary */
+  --error: #cf6679;
+  --s-dark: #00b686;
+}
+
+/*///////////      LAYOUT MOBILE FIRST     //////////// */
+
+
+/* GLOBAL */
+
+body {
+    background-color: var(--secondary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p, span, li, a, label {
+  font-family: 'Lato', sans-serif;
+  line-height: 2rem;
+  font-size: 1.3rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.btn {
+  background-color: var(--s-dark);
+  color: var(--text-color);
+}
+
+.btn:hover {
+  color: var(--s-dark);
+  background-color: transparent;
+  border: 1px solid var(--s-dark);
+}
+
+/* BARRE DE NAVIGATION */
+
+.navbar {
+    background-color: var(--background-color);
+  }
+
+  /* font et couleur des liens */
+  .navbar a {
+    text-transform: uppercase;
+    color: var(--text-color);
+  }
+
+/* FIN BARRE DE NAVIGATION */
+
+/* FOOTER */
+
+/* sticky bottom */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#site-content {
+  /* s'agrandit pour occuper l'espace libre */
+  flex-grow: 1;
+  /* Ne rétrécit pas lorsque l'espace se reduit */
+  flex-shrink: 0;
+  flex-basis: auto;
+}
+
+#site-footer {
+  min-height: 6vh;
+  background-color: var(--background-color);
+  margin-top: auto;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  /* Ne rétrécit pas lorsque l'espace se reduit */
+  flex-shrink: 0;
+}
+
+/* RESEAUX SOCIAUX */
+
+.fab {
+  color:  var(--text-color);
+}
+
+/* BREAK POINT TABLETTE */
+
+@media (min-width: 760px) {
+  .navbar li {
+    height: 10vh;
+    min-width: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* BARRE DE NAVIGATION */
+
+  /* soulignement des liens au survol */
+  .navbar li {
+    position: relative;
+  }
+
+  /* pseudo qui sert à souligner le lien au survol */
+  .navbar li::after {
+    content: "";
+    display: block;
+    width: 0;
+    border: 2px solid var(--s-dark);
+    background-color: 2px solid var(--s-dark);
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    transition: width 0.5s ease-out;
+  }
+  .navbar li:hover::after {
+    width: 100%;
+    opacity: 1;
+  }
+
+  /* changement de couleur des liens au survol */
+  .navbar li > a:hover {
+    color: var(--s-dark);
+  }
+  /* FIN BARRE DE NAVIGATION */
+
+  /* BOUTIQUE */
+
+  /* affichage des images des produits  */
+  .card-img-top {
+    max-height: 40vh;
+    object-fit: cover;
+    object-position: center;
+  }
+}
